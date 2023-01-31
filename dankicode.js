@@ -1,5 +1,12 @@
-function helloDankiCode(){
-    console.log("Ola mundo");
+class DankiCode{ //Classe
+    constructor(){ //Constutor
+        this.nome = 'Aula 2/2 - Modulos'
+
+    }
+
+    testes(){ //Metodo
+        console.log('Invocando testes!');
+    }
 }
 
-exports.helloDankiCode = helloDankiCode;
+module.exports = DankiCode;

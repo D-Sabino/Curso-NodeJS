@@ -92,5 +92,7 @@ fs.rename('danki.txt', 'dankiCode.txt', function (err) {
 
  */
 
- const dankiCode = require ('./dankicode.js');
- dankiCode.helloDankiCode();
+const DankiCode = require('./dankicode.js');
+
+const danki = new DankiCode();
+console.log(danki.nome);
