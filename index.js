@@ -68,7 +68,7 @@ fs.unlink('danki.txt', function(err){
 fs.rename('danki.txt', 'dankiCode.txt', function (err) { 
     console.log('Arquivo renomeado');
  })
- */
+ 
 
  //Lendo informacoes do CMD
  const readline = require('readline');
@@ -89,3 +89,8 @@ fs.rename('danki.txt', 'dankiCode.txt', function (err) {
     console.log('Adeus!');
     process.exit(0);
  })
+
+ */
+
+ const dankiCode = require ('./dankicode.js');
+ dankiCode.helloDankiCode();
