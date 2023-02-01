@@ -1,5 +1,16 @@
 <html>
+
+    <head>
+        <title>Lista de tarefas | Projeto 1</title>
+        <link href="/public/style.css" rel="stylesheet" />
+    </head>
+
     <body>
-        <h2>Ola <%= nome %>!</h2>
+        <div class="tarefas"> <!-- Criando um loop com ejs -->
+            <% for(let i=0; i < tarefaslist.length; i++){ %>
+                <p> <%= tarefaslist[i] %> | <a href="/deletar/<%= i %>">X</a></p>
+            
+            <% } %>
+        </div>
     </body>
 </html>
