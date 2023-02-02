@@ -7,6 +7,12 @@
 
     <body>
         <div class="tarefas"> <!-- Criando um loop com ejs -->
+            <form method="post">
+                <input type="text" name="tarefa" />
+                <input type="submit" name="acao" value="Inserir"/>
+            </form>
+
+            <!--Excluir tarefa-->
             <% for(let i=0; i < tarefaslist.length; i++){ %>
                 <p> <%= tarefaslist[i] %> | <a href="/deletar/<%= i %>">X</a></p>
             
