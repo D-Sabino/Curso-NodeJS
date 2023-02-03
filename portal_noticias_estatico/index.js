@@ -12,20 +12,20 @@ app.use(bodyParser.urlencoded({
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use('/public', express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/pages'));
 
 app.get('/',(req,res)=>{
     console.log(req.query);
 
     if(req.query.busca == null){
-        res.send('Home');
+        res.render('home',{})
     }else{
         res.send('Você buscou: '+req.query.busca);
     }
 
 })
 
-app.get(':slug',(req,res)=>{
+app.get('/:slug',(req,res)=>{
     res.send(req.params.slug);
 })
 
