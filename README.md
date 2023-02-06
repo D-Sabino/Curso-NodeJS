@@ -7,7 +7,7 @@
 </p>
 
 ## Módulos:
-- [x] Introdução <br>
+- [X] Introdução <br>
 - [x] Configurando ambiente <br>
 - [x] Primeiros passos com NodeJS <br>
 - [x] Manipulando arquivos com NodeJS <br>
