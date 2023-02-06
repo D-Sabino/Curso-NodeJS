@@ -7,13 +7,13 @@
 </p>
 
 ## Módulos:
-- [x] Introdução <br>
+- [X] Introdução <br>
 - [x] Configurando ambiente <br>
 - [x] Primeiros passos com NodeJS <br>
 - [x] Manipulando arquivos com NodeJS <br>
 - [x] Nodemon para produtividade <br>
-- [ ] Entendendo o que são módulos <br>
-- [ ] Seu primeiro projeto com NodeJS <br>
+- [x] Entendendo o que são módulos <br>
+- [x] Seu primeiro projeto com NodeJS <br>
 - [ ] Projeto site noticias estatico <br>
 - [ ] Projeto site noticias dinamico <br>
 - [ ] Criando sistema de chat (sockets) <br>
