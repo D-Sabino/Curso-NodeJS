@@ -232,6 +232,13 @@ section.outras-noticias h2{
     font-size: 14px;
 }
 
+footer{
+    background-color: #0AACDC;
+    text-align: center;
+    color: white;
+    padding: 8px 0;
+}
+
 @media screen and (max-width: 768px) {
     .logo, .form-busca{width: 100%;}
     .form-busca{
