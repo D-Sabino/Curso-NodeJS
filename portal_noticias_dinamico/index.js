@@ -56,7 +56,21 @@ app.get('/',(req,res)=>{
              })
         })
     }else{
-        res.render('busca',{});
+
+        Posts.find({titulo: {$regex: req.query.busca, $options:"i"}}, function(err,posts){
+            posts = posts.map(function(val){
+                return{
+                    titulo: val.titulo,
+                    conteudo: val.conteudo,
+                    descricaoCurta: val.conteudo.substr(0,100),
+                    imagem: val.imagem,
+                    slug: val.slug,
+                    categoria: val.categoria
+                }
+            })
+            res.render('busca', {posts:posts, contagem:posts.lenght});
+        })
+
     }
 
   
