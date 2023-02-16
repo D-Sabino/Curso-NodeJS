@@ -12,6 +12,7 @@
 ```bash
 npm install
 npm install -g nodemon
+npm install mongoose
 ```
 
 <p align="justify">
