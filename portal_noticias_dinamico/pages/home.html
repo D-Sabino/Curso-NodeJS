@@ -7,10 +7,10 @@
             <div class="overlay-destaque"></div>
             <div class="title-destaque-descricao">
                 <!--feito em off o link aqui e adicionado nos estilos-->
-                <a href="/slug-aqui"><h2>Quer Fugir das Praias de Verão?</h2></a>
-                <p>Donec consectetur libero eget bibendum ullamcorper. Quisque auctor nulla eu enim ultrices laoreet. Na..</p>
+                <a href="<%= posts[0].slug %>"><h2><%= posts[0].titulo %></h2></a>
+                <p><%- posts[0].descricaoCurta %>...</p>
             </div>
-            <img src="/public/images/landscape.jpg" />
+            <img src="<%= posts[0].imagem %>" />
         </div>
     </div>
 </section>
@@ -21,60 +21,32 @@
         <br><br>
         <div class="center">
             <div class="ultimas">
+                <% for(let i = 1; i < posts.length; i++){ %>
                 <div class="box-ultima-single">
-                    <img src="/public/images/noticia.png" />
+                    <img src="<%= posts[i].imagem %>" />
                     <div class="conteudo-noticia-single">
-                    <h3>Natureza e Geral</h3>
-                    <h2>Como Encarar o Surf em Floripa</h2>
-                    <p>A água gelada e o vento pode acabar com a sua felicidade de ir para a água. Cientistas afirmam que a chance de hipotermia é real e você precisa se cuidar. Veja como.</p>
-                    <a href="/encarar-o-surf">Saiba mais</a>
+                        <h3><%= posts[i].categoria %></h3>
+                        <h2><%= posts[i].titulo %></h2>
+                        <p><%- posts[i].descricaoCurta %>...</p>
+                        <a href="<%= posts[i].slug %>">Saiba mais</a>
+                    </div>
                 </div>
-                </div>
-                <div class="box-ultima-single">
-                    <img src="/public/images/noticia.png" />
-                    <div class="conteudo-noticia-single">
-                    <h3>Natureza e Geral</h3>
-                    <h2>Como Encarar o Surf em Floripa</h2>
-                    <p>A água gelada e o vento pode acabar com a sua felicidade de ir para a água. Cientistas afirmam que a chance de hipotermia é real e você precisa se cuidar. Veja como.</p>
-                    <a href="/encarar-o-surf">Saiba mais</a>
-                </div>
-                </div>
+                <% } %>
+
             </div>
             <div class="mais-lidas">
                 <h3>Mais Lidas</h3>
                 <div class="mais-lidas-noticias">
+                    <% for(let i = 0; i < posts.length; i++){ %>
                     <div class="mais-lida-noticia-single">
-                        <img src="/public/images/natureza_small.png" />
+                        <img src="<%= posts[i].imagem %>" />
                         <div class="texto-mais-lida-single">
-                            <h4>Natureza</h4>
-                            <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o degelo na fauna e flora?</p>
-                            <a href="/encarar-o-surf">Saiba mais</a>
+                            <h4><%= posts[i].titulo %></h4>
+                            <p><%- posts[i].descricaoCurta %></p>
+                            <a href="<%= posts[i].slug %>">Saiba mais</a>
                         </div>
                     </div>
-                    <div class="mais-lida-noticia-single">
-                        <img src="/public/images/natureza_small.png" />
-                        <div class="texto-mais-lida-single">
-                            <h4>Natureza</h4>
-                            <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o degelo na fauna e flora?</p>
-                            <a href="/encarar-o-surf">Saiba mais</a>
-                        </div>
-                    </div>
-                    <div class="mais-lida-noticia-single">
-                        <img src="/public/images/natureza_small.png" />
-                        <div class="texto-mais-lida-single">
-                            <h4>Natureza</h4>
-                            <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o degelo na fauna e flora?</p>
-                            <a href="/encarar-o-surf">Saiba mais</a>
-                        </div>
-                    </div>
-                    <div class="mais-lida-noticia-single">
-                        <img src="/public/images/natureza_small.png" />
-                        <div class="texto-mais-lida-single">
-                            <h4>Natureza</h4>
-                            <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o degelo na fauna e flora?</p>
-                            <a href="/encarar-o-surf">Saiba mais</a>
-                        </div>
-                    </div>
+                    <% } %>
                 </div>
             </div>
         </div>

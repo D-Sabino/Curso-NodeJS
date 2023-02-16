@@ -3,16 +3,17 @@ const mongoose = require('mongoose')
 var bodyParser = require('body-parser')
 
 const path = require('path');
-
 const app = express();
 
-mongoose.connect('mongodb+srv://root:HthZ6jKqn5x1SmSC@cluster0.sotslrg.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true}).then(function(){
+const Posts = require('./Posts.js');
+
+mongoose.connect('mongodb+srv://root:HthZ6jKqn5x1SmSC@cluster0.sotslrg.mongodb.net/dankicode?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true}).then(function(){
     console.log('Conectado com sucesso');
 }).catch(function(err){
     console.log(err.message);
 })
 
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use( bodyParser.json() );       // to support JSON-encoded bodies 
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
@@ -26,7 +27,20 @@ app.set('views', path.join(__dirname, '/pages'));
 app.get('/',(req,res)=>{
     
     if(req.query.busca == null){
-        res.render('home',{});
+        Posts.find({}).sort({'_id': -1}).exec(function(err,posts){
+            posts = posts.map(function(val){
+                return{
+                    titulo: val.titulo,
+                    conteudo: val.conteudo,
+                    descricaoCurta: val.conteudo.substr(0,100),
+                    imagem: val.imagem,
+                    slug: val.slug,
+                    categoria: val.categoria
+                }
+            });
+
+            res.render('home',{posts:posts});
+        })
     }else{
         res.render('busca',{});
     }
