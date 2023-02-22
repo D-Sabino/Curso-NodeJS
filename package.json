@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/D-Sabino/Curso-NodeJS/issues"
   },
-  "homepage": "https://github.com/D-Sabino/Curso-NodeJS#readme"
+  "homepage": "https://github.com/D-Sabino/Curso-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
