@@ -37,7 +37,7 @@ Isso permite que scripts locais sejam executados no computador, o que é necess�
 - [x] Entendendo o que são módulos <br>
 - [x] Seu primeiro projeto com NodeJS <br>
 - [x] Projeto site noticias estatico <br>
-- [ ] Projeto site noticias dinamico <br>
+- [x] Projeto site noticias dinamico <br>
 - [ ] Criando sistema de chat (sockets) <br>
 - [ ] Deploy NodeJS <br>
 - [ ] Projeto portal de gestão <br>
