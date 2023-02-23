@@ -38,7 +38,7 @@ Isso permite que scripts locais sejam executados no computador, o que é necess�
 - [x] Seu primeiro projeto com NodeJS <br>
 - [x] Projeto site noticias estatico <br>
 - [x] Projeto site noticias dinamico <br>
-- [ ] Criando sistema de chat (sockets) <br>
+- [x] Criando sistema de chat (sockets) <br>
 - [ ] Deploy NodeJS <br>
 - [ ] Projeto portal de gestão <br>
 - [ ] Webscraping com Puppeteer e criação de bots (BONUS)
