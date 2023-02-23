@@ -37,31 +37,29 @@
     <ul id="messages"></ul>
 
     <form id="form" action="">
-
       <input id="input" autocomplete="off" /><button>Send</button>
-
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
+      var socket = io();
+      let nome = prompt('Qual o seu nome?');
 
-        var socket = io();
+      alert ('Bem-vindo ao Danki chat ' + nome);
 
-        socket.on('conectado', function(msg) {
+      var messages = document.getElementById('messages');
+      var form = document.getElementById('form');
+      var input = document.getElementById('input');
 
-            console.log(msg);
-
-        });
-
-
-
-        socket.on('novo usuario', function(msg) {
-
-            console.log(msg);
-
-        });
-
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        if(input.value){
+          socket.emit('chat message', {msg:input.value, nome:nome});
+          input.value = '';
+          alert('Mensagem foi enviada com sucesso!');
+        }
+      })
     </script>
 
   </body>
