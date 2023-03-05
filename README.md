@@ -39,6 +39,6 @@ Isso permite que scripts locais sejam executados no computador, o que é necess�
 - [x] Projeto site noticias estatico <br>
 - [x] Projeto site noticias dinamico <br>
 - [x] Criando sistema de chat (sockets) <br>
-- [ ] Deploy NodeJS <br>
+- [x] Deploy NodeJS <br>
 - [ ] Projeto portal de gestão <br>
 - [ ] Webscraping com Puppeteer e criação de bots (BONUS)
