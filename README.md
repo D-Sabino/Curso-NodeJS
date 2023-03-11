@@ -13,6 +13,9 @@
 npm install
 npm install -g nodemon
 npm install mongoose
+npm install express
+npm install express-fileupload
+npm install express-session
 ```
 
 <p align="justify">
